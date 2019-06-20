@@ -1,0 +1,610 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+body
+	min-width: 320px
+	font-family: "Arial", sans-serif
+	font-size: 1rem
+	line-height: 1.5
+	letter-spacing: 0.05em
+
+h1, h2, h3, h4 
+	letter-spacing: 0.05em
+
+.container 
+	// outline: 1px solid red
+
+
+/* ----------------------------------------header---------------------------------------- */
+
+.header__wrap
+	padding-top: 190px
+	padding-bottom: 125px
+	color: #fff
+	background: #303263 url("../img/header-bg.jpg") no-repeat center
+	background-size: cover
+
+.header__title 
+	margin: 0
+	margin-bottom: 10px
+	padding: 0 25px
+	font-size: 3rem
+	font-family: $font-paragon
+	text-align: center
+	text-transform: uppercase
+
+.header__descr
+	margin: 0
+	margin-bottom: 30px
+	padding: 0 150px
+	font-size: 1.5rem
+	font-family: $font-ptsans
+	text-align: center
+
+.header__achievements-wrap 
+	display: flex
+	flex-wrap: wrap
+	padding: 0 170px
+	justify-content: space-between
+
+.header__achievements
+	position: relative
+	width: 250px
+	padding: 35px 0
+	border: 2px solid #fff 
+	border-top: none
+	text-align: center
+	&::before,
+	&::after
+		content: ""
+		position: absolute
+		top: 0
+		height: 2px
+		width: 40%
+		background-color: #fff
+	&::before
+		left: 0
+	&::after
+		right: 0
+	
+
+.header__achievements-quantity
+	font-size: 3rem
+	font-family: $font-paragon
+	&::before
+		content: ""
+		position: absolute
+		top: 0
+		left: 50%
+		transform: translate(-50%, -50%)
+		width: 50px
+		height: 50px
+		background: url("../img/header__achievements-sprite.png") no-repeat
+	&--1::before
+		background-position: -3px -5px
+	&--2::before
+		background-position: -57px -5px
+	&--3::before
+		background-position: -116px -5px
+
+.header__achievements-descr
+	font-size: 1.125rem
+
+.header__navigation-wrap
+	border-bottom: 1px solid #adadad
+
+.header__navigation 
+	display: flex
+	flex-wrap: wrap
+	justify-content: flex-end
+	padding: 0
+	margin: 0 -15px
+	list-style: none
+	a 
+		display: block
+		padding: 25px 15px
+		font-family: $font-futura
+		font-size: 1.6rem
+		color: #000
+		&:hover 
+			color: #f6ae48
+			text-decoration: none
+@import "_nav-toggle"
+/* ----------------------------------------studio---------------------------------------- */
+
+.studio
+	 color: #000
+
+.studio__descr-wrap
+	display: flex
+	flex-wrap: wrap
+	padding: 160px 30px 200px
+	background: url("../img/studio-bg.png") no-repeat center
+
+.studio__title
+	display: flex
+	align-items: center
+	width: 30%
+	margin-bottom: 0
+	font-size: 3rem
+	font-family: $font-helvetica
+
+.studio__descr
+	width: 70%
+	margin-bottom: 0
+	font-size: 1.25rem
+	text-align: justify
+	color: rgba(0, 0, 0, .8)
+
+.studio__items-wrap
+	display: flex
+	flex-wrap: wrap
+	padding-bottom: 150px
+
+.studio__item
+	width: 33.33%
+	position: relative
+	padding: 80px 20px
+	transition: background-color 200ms, transform 200ms, border-radius 1000ms
+	&::before
+		content: ""
+		position: absolute
+		top: 20px
+		left: 20px
+		background: url("../img/studio__item-sprite.png") no-repeat 
+	&--1::before
+		width: 30px
+		height: 58px
+		background-position: -156px -10px
+	&--1:hover::before
+		background-position: -106px -10px
+	&--2::before
+		width: 28px
+		height: 45px
+		background-position: -58px -10px
+	&--2:hover::before
+		background-position: -10px -10px
+	&--3::before
+		width: 54px
+		height: 44px
+		background-position: -280px -10px
+	&--3:hover::before
+		background-position: -206px -10px
+	&:hover 
+		color: #ffffff
+		background-color: #f6ae48
+		border-radius: 10px
+		transform: scale(1.05)
+		box-shadow: 10px 10px 20px rgba(0, 0, 0, .3)
+	&:hover .studio__item-price
+		display: block
+
+.studio__item-title
+	font-size: 1.25rem
+
+.price
+	padding: 5px 10px
+	font-size: 1.125rem
+	color: #fff
+	border: 2px solid #fff
+
+.studio__item-price
+	display: none
+	position: absolute
+	left: 20px
+	bottom: 20px
+
+.studio__item-link
+	position: absolute 
+	right: 50px
+	bottom: 30px
+	display: block
+	width: 23px
+	height: 23px
+	background-image: url("../img/studio__item-link.png")
+	transition: transform 200ms
+	&:hover
+		transform: scale(1.5) rotate(360deg)
+
+/* ----------------------------------------target---------------------------------------- */
+
+.target 
+	padding: 120px 0
+	text-align: center
+	color: #fff
+	background: #303263 url("../img/target-bg.jpg") no-repeat center
+	background-size: cover
+
+.target__title 
+	font-size: 3rem
+	font-family: $font-helvetica
+	text-transform: uppercase
+
+.target__text
+	font-size: 1.5rem
+	font-family: $font-ptsans
+
+/* ----------------------------------------develop---------------------------------------- */
+
+.develop
+	margin-top: -50px
+	padding: 115px 0 50px
+	color: #fff
+	background: url("../img/develop-bg.jpg") no-repeat left top
+	background-size: 45% auto
+
+.develop__head
+	margin-bottom: 60px
+	font-size: 3rem
+	font-family: $font-paragon
+
+.develop__item-wrap
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-around
+
+.develop__item
+	width: 365px
+	position: relative
+	padding: 60px 40px 30px
+	background: #303263 no-repeat center
+	background-size: cover
+	&--1
+		background-image: url("../img/develop__item--1.jpg")
+	&--2
+		background-image: url("../img/develop__item--2.jpg")
+	&--3
+		background-image: url("../img/develop__item--3.jpg")
+
+.develop__title 
+	margin-bottom: 45px
+	font-size: 2.5rem
+	font-family: $font-helvetica
+	text-transform: uppercase
+	border-bottom: 1px solid #fff
+
+.develop__price 
+	display: inline-block
+	vertical-align: middle
+	margin-right: 50px
+	padding: 10px 30px
+	border: 4px solid #00b9e7 
+	
+.develop__link
+	display: inline-block
+	vertical-align: middle
+	width: 33px
+	height: 33px
+	background: url("../img/develop__link.png") no-repeat
+	transition: transform 200ms
+	&:hover
+		transform: scale(1.2)
+
+/* ----------------------------------------features---------------------------------------- */
+
+.features 
+	color: #000
+	.features__wrap
+		position: relative
+		&::before
+			content: ""
+			position: absolute
+			z-index: -1
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			opacity: 1
+
+	&--seo
+		.features__wrap::before
+			background: url("../img/featurs--seo-bg.jpg") no-repeat  right 130px top 130px
+		.features__title
+			&::before
+				content: "Be the first"
+
+	&--adaptive
+		.features__wrap::before
+			background: url("../img/featurs--adaptive-bg.jpg") no-repeat  right 130px top 180px
+		.features__title
+			&::before
+				content: "Adaptive"
+
+	&--care
+		.features__wrap::before
+			background: url("../img/featurs--care-bg.jpg") no-repeat  right 0px top 100px
+		.features__title
+			&::before
+				content: "Be carefull"
+
+	
+				
+			
+
+
+// -------------------------------------
+
+
+// -------------------------------------
+
+.features__content
+	width: 50%
+	padding: 160px 0 180px
+	
+.features__title 
+	position: relative
+	font-family: $font-paragon
+	font-size: 2.25rem
+	text-transform: uppercase
+	&::before
+		position: absolute
+		top: -80%
+		left: -10%
+		font-size: 5rem
+		font-family: "Tahoma", sans-serif
+		font-weight: bold
+		color: rgba(0, 0, 0, .1)
+
+.features__text
+	font-size: 1.5rem
+	line-height: 2
+
+/* ----------------------------------------projects---------------------------------------- */
+
+.projects 
+	color: #fff
+
+.projects__title-wrap
+	background-color: #303263
+
+.projects__title
+	position: relative
+	padding: 30px 0 20px
+	margin-bottom: 0
+	font-family: $font-paragon
+	font-size: 2.25rem
+	text-align: center
+	text-transform: uppercase
+	&::before
+		content: "Our projects"
+		display: block
+		width: 100%
+		position: absolute
+		top: 50%
+		transform: translateY(-50%)
+		font-size: 96px
+		font-family: "Tahoma", sans-serif
+		font-weight: bold
+		color: rgba(255, 255, 255, .15)
+
+.projects__items-wrap
+	display: flex
+	flex-wrap: wrap
+	max-width: 1920px
+	margin: 0 auto
+
+.projects__item 
+	width: 25%
+	transition: 200ms
+	&:hover
+		box-shadow: 10px 10px 20px rgba(0,0,0,.3)
+		transform: scale(1.01)
+	img
+		width: 100%
+	&--wide 
+		width: 50%
+
+.projects__button-wrap
+	padding: 25px 0
+	text-align: center
+	background-color: #303263	
+
+.button
+	display: inline-block
+	padding: 0.8em 1.2em 0.5em
+	border: none
+	border-radius: 0.5em
+	font-family: $font-paragon
+	font-size: 1.185rem
+	color: #fff
+	text-transform: uppercase
+	background-color: #6a6b8e
+	transition: 200ms
+	&:hover
+		color: #fff 
+		box-shadow: 2px 10px 30px rgba(0, 0, 0, 0.5)
+		background-color: rgba(247, 187, 101, 1)
+		transform: scale(1.1)
+		text-decoration: none
+
+/* ----------------------------------------trade---------------------------------------- */
+
+.trade 
+	padding: 50px 0
+	color: #fff
+	background: #303263 url("../img/trade-bg.jpg") no-repeat center
+	background-size: cover
+
+.trade__title 
+	margin-bottom: 60px
+	text-align: center
+	font-size: 3rem
+	font-family: $font-paragon
+	text-transform: uppercase
+
+.trade__items-wrap
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+	max-width: 1400px
+	margin: 0 auto
+	padding-bottom: 30px
+
+.trade__item
+	width: 33.33%
+	padding: 0 15px
+
+.trade__item-title
+	position: relative
+	padding-left: 80px
+	font-size: 1.7em
+	font-family: $font-paragon
+	text-transform: uppercase
+	&::before
+		content: ""
+		position: absolute
+		left: 0
+		top: -20px
+		width: 70px
+		height: 70px
+		background: url("../img/trade__item-title-sprite.png") no-repeat center 
+	&--1::before
+		background-position: -181px 0px
+	&--2::before
+		background-position: center
+	&--3::before
+		background-position: -10px -6px
+
+.trade__button-wrap
+	text-align: center
+
+.trade__button
+	background-color: rgba(247, 187, 101, 1)
+
+/* ----------------------------------------FOOTER---------------------------------------- */
+
+.footer
+	color: #fff
+	
+	
+
+.footer__top
+	padding: 120px 0
+	background: #303263 url("../img/footer-bg.jpg") no-repeat center
+	background-size: cover 
+
+.footer__wrap	
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
+
+.footer__content
+	width: 31%
+
+.footer__title
+	margin-bottom: 40px
+	font-size: 1.875rem
+	font-family: $font-paragon
+	text-transform: uppercase
+
+.footer__text
+	font-size: 1.125rem
+
+.footer__form-wrap
+	width: 53%
+	box-sizing: border-box
+
+.footer__form-name,
+.footer__form-surname,
+.footer__form-mail,
+.footer__form-textarea
+	padding: 10px 20px
+	border: 5px solid #fff
+	outline: none
+	background-color: transparent
+	font-size: 1.125rem
+	color: #fff
+	&::placeholder
+		font-size: 1.125rem
+		color: #fff
+
+.form__name-wrap
+	display: flex
+	flex-wrap: wrap
+
+.footer__form-name,
+.footer__form-surname
+	width: 50%
+.footer__form-name
+	border-right: none
+
+.footer__form-mail,
+.footer__form-textarea
+	display: inline-block
+	width: 100%
+	margin-top: -5px
+.footer__form-textarea
+	height: 180px
+	margin-bottom: 10px
+
+.form__text-wrap
+	display: flex
+	justify-content: space-between
+
+.footer__form-text
+	display: inline-block
+	padding-left: 20px 
+
+.footer__form-button
+	max-height: 40px
+	font-size: 0.875rem
+	background-color: #f7bb65
+
+.social-links
+	font-family: "fontello"
+	a 
+		margin-right: 5px
+	a:hover 
+		&::before
+			transform: scale(1.2)
+			transition: 200ms
+			color: #fff
+	a::before
+		text-align: center
+		display: inline-block
+		color: #fff
+.social-fb::before	
+	content: '\f09a'
+.social-tw::before	
+	content: '\f099'
+.social-dr::before	
+	content: '\f31b'
+.social-ml::before	
+	content: '\e800'
+.social-pn::before	
+	content: '\f231'
+ 
+.footer__social
+	padding: 20px 5px
+	background-color: #f6ae48
+.footer__social-wrap
+	max-width: 360px
+	margin: 0 auto
+	text-align: center
+.footer__social-title
+	text-transform: uppercase
+	margin-bottom: 0.5em
+.footer__social-links
+	margin-bottom: 10px
+	a
+		display: inline-block
+		width: 45px
+		height: 45px
+		border-radius: 50%
+		background-color: #6a6b8e
+		font-size: 1.2rem
+
+		line-height: 45px
+		transition: transform 200ms
+		&::before
+			color: #fff
+		&:hover 
+			transform: scale(1.1)
+			color: #fff
+			background-color: #303263
+
+@import "media"  
+
+	 
+	 

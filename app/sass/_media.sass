@@ -1,0 +1,233 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+// <1200px (960px) -------------------------------------------
++media-breakpoint-down(lg)
+  .header__achievements
+    width: 180px
+  
+  .develop__item
+    width: 290px
+    padding: 30px
+  .develop__title
+    font-size: 2rem
+  .develop__price
+    padding: 10px 20px
+    margin-right: 20px
+
+  .features--adaptive 
+    .features__wrap::before
+      background-position: right 0 top 180px
+  .features--care 
+    .features__wrap::before
+      background-position: right -40px top 100px
+  .features__title
+    &::before
+      top: -60%
+      font-size: 4.3rem
+
+// <992px (720px) -------------------------------------------
++media-breakpoint-down(md)
+  .header__title
+    font-size: 2.4rem
+  .header__descr
+    padding: 0 10px
+  .header__achievements-wrap
+    padding: 0 50px
+  
+  .studio__descr-wrap
+    padding: 100px 15px 100px
+  .studio__items-wrap
+    padding-bottom: 100px
+
+  .target__title
+    font-size: 2.4rem
+
+  .develop
+    background-size: 55% auto
+  .develop__item
+    width: 215px
+    padding: 15px
+  .develop__price
+    padding: 10px
+    margin-right: 0
+  .develop__title
+    font-size: 1.6rem
+  .develop__price
+    font-size: 1rem
+
+  .features__content
+    width: 100%
+    padding: 100px 0
+  .features__title
+    &::before
+      left: -15px
+  .features 
+    .features__wrap::before
+      opacity: 0.3
+  .features--seo 
+    .features__wrap::before
+      background-position: right 0 top 20px
+  .features--adaptive 
+    .features__wrap::before
+      background-position: right 0 top 60px
+
+  .trade__item
+    width: 50%
+    &:last-child
+      margin-top: 20px
+
+  .footer__content
+    width: 41%
+  .footer__form-text
+    padding-left: 0
+    padding-right: 5px
+
+
+// <768px (540px) -------------------------------------------
++media-breakpoint-down(sm)
+  .header__title
+    font-size: 1.8rem
+  .header__descr
+    font-size: 1.3rem
+  .header__achievements-wrap
+    padding: 0 90px
+  .header__achievements
+    width: 100%
+    margin-bottom: 35px
+  .header__achievements-quantity
+    font-size: 2.5rem
+  .header__navigation-wrap
+    position: fixed
+    z-index: 10
+    top: 0
+    width: 100%
+    padding: 10px 0
+    background-color: rgba(0, 0, 0, .5)
+  .header__navigation 
+    display: flex
+    margin: 0 -15px
+    max-height: 0
+    overflow: hidden
+    transition: max-height .5s
+    clear: both
+    li
+      width: 100%
+      text-align: center
+      background-color: rgba(255, 255, 255, .9)
+      border-bottom: 1px solid #adadad
+    a 
+      padding: 15px 15px
+      font-size: 1.4rem
+    &--active
+      max-height: 500px
+  .header__nav-toggle
+    display: block
+    float: right
+
+  .studio__descr-wrap
+    padding: 50px 15px 50px
+    background-size: 90%
+  .studio__title,
+  .studio__descr
+    width: 100%
+  .studio__title
+    font-size: 2.5rem  
+  .studio__items-wrap
+    padding-bottom: 50px
+  .studio__item
+    width: 100%
+    padding: 80px 0
+
+  .target
+    padding: 50px 0
+  .target__title
+    font-size: 2rem
+  .target__text
+    font-size: 1.3rem
+
+  .develop
+    background-size: 60% auto
+  .develop__head 
+    font-size: 2.5rem
+  .develop__item
+    width: 100%
+    margin-bottom: 20px
+  .develop__link
+    float: right
+    margin-top: 10px
+
+  .features__content
+    padding: 50px 0
+  .features__title
+    font-size: 1.65rem
+    &::before
+      font-size: 2.5rem
+      top: -40%
+  .features__text
+    font-size: 1.3rem
+    line-height: 1.7
+
+  .projects__item
+    width: 50%
+    &--wide 
+      width: 100%
+  .projects__title
+    font-size: 2rem
+    &::before
+      font-size: 50px
+  .projects__button
+    font-size: 1rem
+
+  .trade__title 
+    margin-bottom: 30px
+  .trade__item
+    width: 100%
+    margin-bottom: 20px
+
+  .footer__content,
+  .footer__form-wrap
+    width: 100%
+  .footer__top
+    padding: 50px 0
+  .footer__title
+    margin-bottom: 20px
+  
+
+// <576px (auto) -------------------------------------------
++media-breakpoint-down(xs)
+  .header__wrap
+    padding: 100px 0 50px
+  .header__achievements-wrap
+    padding: 0 20px
+
+  .develop
+    padding: 50px 0
+    background-size: 100% auto
+  .develop__item-wrap
+    margin: 0 -15px
+
+  .footer__form-name,
+  .footer__form-surname
+    width: 100%
+    margin-top: -5px
+  .footer__form-name
+    border: 5px solid #fff
+  
+
+
+
+/*==========  Mobile First  ==========*/
+
+// ≥576px (540px)
++media-breakpoint-up(sm)
+
+// ≥768px (720px)
++media-breakpoint-up(md)
+
+// ≥992px (960px)
++media-breakpoint-up(lg)
+
+// ≥1200px (1140px)
++media-breakpoint-up(xl)
